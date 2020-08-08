@@ -5,4 +5,4 @@ It uses:
 - 16x2 lcd
 - pytho 3.8
 
-file main.py has some instructions at the end, that you willhave to follow in order to proceed.
+file main.py has some instructions at the end, that you will have to follow in order to proceed.
