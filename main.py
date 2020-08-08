@@ -91,16 +91,16 @@ def GpuHandle():
     return handle
 
 def getDeviceIndex(handle):
-
     for i in range(len(handle.Hardware)):
         handle.Hardware[i].Update()
         for x in range(len(handle.Hardware[i].Sensors)):
             sensor = handle.Hardware[i].Sensors[x]
-            if (sensor.Name == "CPU Package" and sensor.SensorType == 2 or sensor.Name == "GPU Core" and sensor.SensorType == 2):
-                print(sensor.Name, sensor.Value)
-                print(i, x)
+            #if (sensor.Name == "CPU Package" and sensor.SensorType == 2 or sensor.Name == "GPU Core" and sensor.SensorType == 2):
+            print(sensor.Name, sensor.Value)
+            print(i, x)
             #break
 
+###########################
 
 def getCpuTemp(handle):
     handle.Hardware[0].Update()
@@ -111,9 +111,20 @@ def getGpuTemp(handle):
 
 HardwareHandle = CpuHandle()
 
-getDeviceIndex(GpuHandle())
+getDeviceIndex(getCpuTemp(handle))
+getDeviceIndex(getGpuTemp(handle))
 #print(getCpuTemp(HardwareHandle))
 
+###################################################
+#Before running the following part, make sure, that you have the indexes in
+#functions getCpuTemp(handle) and getGpuTemp(handle) right.
+#you can find them in the output of getDeviceIndex(handle)
+###################################################
+#also set your USB port right on the line:
+#ser1 = serial.Serial('COM4', 9600)
+###################################################
+
+"""
 while True:
     while True:
         try:
@@ -134,3 +145,4 @@ while True:
                     break;
         except:
             break
+"""
