@@ -1,5 +1,6 @@
 This is a project  of a device, that displays tempatures of CPU, GPU, and an external thermometer.
 It uses:
+- Windows 10 (other versions might work too)
 - arduino nano
 - BMP280 (I2c thermometer)
 - 16x2 lcd
