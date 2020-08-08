@@ -1,4 +1,6 @@
 This is a project  of a device, that displays tempatures of CPU, GPU, and an external thermometer.
+My goal was to make it quick, so dont be surprised if the code is s***
+
 It uses:
 - Windows 10 (other versions might work too)
 - arduino nano
